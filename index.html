@@ -1,0 +1,44 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" href="./css/style.css">
+</head>
+<body>
+    <div class="container">
+        <div class="box">
+            <span style="--i:1"><img src="./assets/images/picture4.avif" alt=""></span>
+            <span style="--i:2"><img src="./assets/images/picture15.avif" alt=""></span>
+            <span style="--i:3"><img src="./assets/images/picture16.avif" alt=""></span>
+            <span style="--i:4"><img src="./assets/images/picture23.avif" alt=""></span>
+            <span style="--i:2"><img src="./assets/images/picture27.avif" alt=""></span>
+            <span style="--i:6"><img src="./assets/images/picture36.avif" alt=""></span>
+            <span style="--i:7"><img src="./assets/images/picture44.avif" alt=""></span>
+            <span style="--i:8"><img src="./assets/images/picture56.avif" alt=""></span>
+        </div>
+    </div>
+    <div class="btns">
+        <div class="btn prev"></div>
+        <div class="btn next"></div>
+    </div>
+
+    <script>
+        let prev = document.querySelector('.prev');
+        let next = document.querySelector('.next');
+        let box = document.querySelector('.box');
+
+        let degrees = 0;
+
+        prev.addEventListener('click', function(){
+            degrees+=45;
+            box.style= `transform: perspective(1000px) rotateY(${degrees}deg)`
+        })
+        next.addEventListener('click', function(){
+            degrees-=45;
+            box.style= `transform: perspective(1000px) rotateY(${degrees}deg)`
+        })
+    </script>
+</body>
+</html>
